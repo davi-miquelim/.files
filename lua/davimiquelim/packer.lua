@@ -13,7 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   -- Debugger
-  use{'mxsdev/nvim-dap-vscode-js', requires = {'mfussenegger/nvim-dap'} }
+
+
+
+  use('mfussenegger/nvim-dap')
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+  use { 'mxsdev/nvim-dap-vscode-js', requires = {'mfussenegger/nvim-dap'} }
 
   use('sainnhe/sonokai')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
