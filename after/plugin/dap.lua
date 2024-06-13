@@ -26,20 +26,20 @@ for _, language in ipairs({"typescript", "javascript"}) do
     }
 end
 
-vim.keymap.set("n", "<leader>b" dap.toggle_breakpoint)
-vim.keymap.set("n", "<leader>gb" dap.run_to_cursor)
+vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
+vim.keymap.set("n", "<leader>gb", dap.run_to_cursor)
 
-vim.keymap.set("n", "<leader>?" function()
+vim.keymap.set("n", "<leader>?", function()
     require("dapui").eval(nil, {enter = true})
 end)
 
 
-vim.keymap.set("n", "<leader>dc" dap.continue)
-vim.keymap.set("n", "<leader>di" dap.step_into)
-vim.keymap.set("n", "<leader>dsr" dap.step_over)
-vim.keymap.set("n", "<leader>dst" dap.step_out)
-vim.keymap.set("n", "<leader>dsb" dap.step_back)
-vim.keymap.set("n", "<leader>dr" dap.restart)
+vim.keymap.set("n", "<leader>dc", dap.continue)
+vim.keymap.set("n", "<leader>di", dap.step_into)
+vim.keymap.set("n", "<leader>dsr", dap.step_over)
+vim.keymap.set("n", "<leader>dst", dap.step_out)
+vim.keymap.set("n", "<leader>dsb", dap.step_back)
+vim.keymap.set("n", "<leader>dr", dap.restart)
 
 dap.listeners.before.attach.dapui_config = function()
     ui.open()
