@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   -- Debugger
-  use('sakhnik/nvim-gdb')
+  use('mfussenegger/nvim-dap')
 
   use('sainnhe/sonokai')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
