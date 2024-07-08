@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/vim-be-good')
 
   use('jose-elias-alvarez/null-ls.nvim')
+  use('williamboman/mason-lspconfig.nvim')
   use('MunifTanjim/prettier.nvim')
   use {
   'VonHeikemen/lsp-zero.nvim',
