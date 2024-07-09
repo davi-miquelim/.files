@@ -8,6 +8,7 @@ require("dap-vscode-js").setup({
 })
 
 require("dap-go").setup()
+require("nvim-dap-virtual-text").setup()
 
 for _, language in ipairs({"typescript", "javascript"}) do
     require("dap").configurations[language] = {
@@ -36,12 +37,12 @@ vim.keymap.set("n", "<leader>?", function()
 end)
 
 
-vim.keymap.set("n", "<leader>dc", dap.continue)
-vim.keymap.set("n", "<leader>di", dap.step_into)
-vim.keymap.set("n", "<leader>dsr", dap.step_over)
-vim.keymap.set("n", "<leader>dst", dap.step_out)
-vim.keymap.set("n", "<leader>dsb", dap.step_back)
-vim.keymap.set("n", "<leader>dr", dap.restart)
+vim.keymap.set("n", "<F1>", dap.continue)
+vim.keymap.set("n", "<F2>", dap.step_into)
+vim.keymap.set("n", "<F3>", dap.step_over)
+vim.keymap.set("n", "<F4>", dap.step_out)
+vim.keymap.set("n", "<F5>", dap.step_back)
+vim.keymap.set("n", "<F6>", dap.restart)
 
 dap.listeners.before.attach.dapui_config = function()
     ui.open()
