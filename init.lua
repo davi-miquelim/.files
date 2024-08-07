@@ -1,2 +1,2 @@
-require("davimiquelim")
+require("config")
 
