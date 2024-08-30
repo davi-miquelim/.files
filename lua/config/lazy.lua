@@ -74,13 +74,10 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "sainnhe/sonokai" } },
+  install = { colorscheme = { "sainnhe/gruvbox-material" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
 
-local color = "sonokai"
+local color = "gruvbox-material"
 vim.cmd.colorscheme(color)
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
