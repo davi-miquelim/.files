@@ -79,5 +79,11 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
+
 local color = "moonfly"
 vim.cmd.colorscheme(color)
