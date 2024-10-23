@@ -5,7 +5,7 @@ return {
             local lsp_zero = require("lsp-zero")
             require('mason').setup({})
             require('mason-lspconfig').setup({
-                ensure_installed = {'tsserver', 'eslint', 'gopls', 'lua_ls', 'emmet_ls' },
+                ensure_installed = {'tsserver', 'eslint', 'gopls', 'lua_ls', 'java_language_server', 'emmet_ls', 'templ', 'htmx-lsp' },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
