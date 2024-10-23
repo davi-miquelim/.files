@@ -6,6 +6,7 @@ return {
             'vrischmann/tree-sitter-templ',
         },
         opts = {
+         ensure_installed = {'templ'},
           auto_install = true,
           highlight = {
             enable = true,

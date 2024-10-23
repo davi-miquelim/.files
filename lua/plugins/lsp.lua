@@ -3,9 +3,10 @@ return {
         'williamboman/mason.nvim',
         config = function()
             local lsp_zero = require("lsp-zero")
+            lsp_zero.extend_lspconfig()
             require('mason').setup({})
             require('mason-lspconfig').setup({
-                ensure_installed = {'tsserver', 'eslint', 'gopls', 'lua_ls', 'java_language_server', 'emmet_ls', 'templ', 'htmx-lsp' },
+                ensure_installed = {'ts_ls', 'eslint', 'gopls', 'lua_ls', 'java_language_server', 'emmet_ls', 'templ', 'htmx' },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
