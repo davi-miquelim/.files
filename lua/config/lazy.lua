@@ -20,7 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.filetype.add({ extension = { templ = "templ" } })
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -79,7 +78,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
 
 local color = "moonfly"
 vim.cmd.colorscheme(color)

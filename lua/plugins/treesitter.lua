@@ -2,11 +2,8 @@ return {
     {
        "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-        dependencies = {
-            'vrischmann/tree-sitter-templ',
-        },
         opts = {
-         ensure_installed = {'templ'},
+          ensure_installed = {'html', 'templ'},
           auto_install = true,
           highlight = {
             enable = true,
